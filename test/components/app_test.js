@@ -6,27 +6,18 @@ describe('App' , () => {
   let component
 
   beforeEach(()=> {
+    //create an instance of App
     component = renderComponent(App)
   })
 
+  // to make an assertion about a target
   it('shows a comment box',() => {
     //chai-jquery find to .css
     expect(component.find('.comment-box')).to.exist
   })
   
+  it('shows a comment list', () => {
+    expect(component.find('.comment-list')).to.exist
+  })
+  
 });
-
-
-/* - DELETED IN S2C12
-  //Unse it to test a single attribute of a target
-  it('shows the correct text', () => {
-
-    //create an instance of App
-
-    const component = renderComponent(App);
-
-    // to make an assertion about a target
-    expect(component).to.contain('React simple starter');
-
-    });
-*/
